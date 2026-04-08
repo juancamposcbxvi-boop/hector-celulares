@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Accesorios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="seccion-login" style="background: #34495e; color: white; padding: 10px; text-align: center;">
+    <input type="password" id="pass-admin" placeholder="Clave de Admin">
+
+    <button onclick="iniciarSesion()">Entrar como Dueño</button>
+   <button id="btn-cerrar-sesion" onclick="cerrarSesion()" style="display:none;">Cerrar Sesión</button>
+   
+    
+        
+    </button>
+</div>
+</div>
+
+
+<div id="panel-admin" style="display: none; border: 2px solid #27ae60; padding: 20px;">
+    
+    <h2>Panel de Control (Dueño)</h2>
+
+    <div id="seccion-subida" style="background: white; padding: 15px; border-radius: 8px;">
+        <h3>Añadir Nuevo Accesorio</h3>
+        
+        <p>Nombre: <input type="text" id="nombre-pro"></p>
+        <p>Precio: <input type="number" id="precio-pro"></p>
+        <label>Seleccionar Foto de Galería:</label><br>
+<input type="file" id="imagen-pro" accept="image/*"><br><br>
+        <button onclick="subirAInventario()" style="background: #27ae60; color: white; padding: 10px;">
+            SUBIR PRODUCTO
+        </button>
+    </div>
+
+    <button onclick="cerrarSesion()" style="margin-top: 20px;">Cerrar Sesión</button>
+
+</div> 
+
+    </div>
+</div>
+
+    <header>
+        <h1>Accesorios Celular H</h1>
+        <div id="indicador-carrito">
+            Carrito: <span id="cuenta-carrito">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo">
+            <h2>Nuestros Productos</h2>
+            <div id="contenedor-productos">
+                <p>Cargando accesorios...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <aside id="resumen-compra" style="padding: 20px; background: #eee; border-top: 20px solid #ccc; margin-top: 20px;">
+    <h2>Tu Carrito</h2>
+    <ul id="lista-carrito">
+        </ul>
+    <h3>Total: $<span id="total-precio">0</span></h3>
+    
+    <hr style="margin: 15px 0;">
+
+    <div id="formulario-pago">
+        <h4>Datos para la entrega:</h4>
+        <input type="text" id="nombre-cliente" placeholder="Nombre completo" style="width:100%; margin: 5px 0; padding: 8px;">
+        <input type="text" id="direccion-cliente" placeholder="Dirección en Soacha/Bogotá" style="width:100%; margin: 5px 0; padding: 8px;">
+        
+        <h4>Selecciona cómo pagar:</h4>
+        <select id="metodo-pago" style="width:100%; padding: 8px; margin: 5px 0;">
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+            <option value="Tarjeta">Tarjeta de Crédito / Débito</option>
+        </select>
+        
+        <br><br>
+        <button onclick="enviarPedido()" style="background: #27ae60; color: white; padding: 12px; border: none; cursor: pointer; width: 100%; font-weight: bold;">
+            REALIZAR PEDIDO
+        </button>
+    </div>
+
+    <button onclick="vaciarCarrito()" style="background: red; color: white; padding: 10px; border: none; cursor: pointer; margin-top: 10px; width: 100%;">
+        Vaciar Carrito
+    </button>
+</aside>
+
+</body>
+</html>
