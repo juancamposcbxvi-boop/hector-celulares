@@ -17,7 +17,7 @@ let productos = [
         id: 2, 
         nombre: "Cargador Carga Rápida", 
         precio: 45000, 
-        imagen: "https://i.postimg.cc/3R8X8X8x/cargador.jpg" 
+        imagen: "https://puntoscolombia.vtexassets.com/arquivos/ids/28986546-1600-auto?v=638705693420870000&width=1600&height=auto&aspect=true" 
     },
     { 
         id: 3, 
