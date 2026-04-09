@@ -23,7 +23,7 @@ let productos = [
         id: 3, 
         nombre: "Vidrio Templado 9D", 
         precio: 15000, 
-        imagen: "https://i.postimg.cc/7Z9Z9Z9z/vidrio.jpg" 
+        imagen: "https://i.postimg.cc/mghChk6N/vidrio-jpg.jpg" 
     },
     { 
         id: 4, 
