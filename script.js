@@ -5,11 +5,40 @@ let ventasTotales = 0;
 let dineroGanado = 0;      
 
 // 2. LA LISTA DE PRODUCTOS (Cambiamos const por LET para poder borrar)
-let productos = JSON.parse(localStorage.getItem('productos_tienda')) || [
-    { id: 1, nombre: "Carcasa iPhone 13", precio: 35000, imagen: "URL_DE_TU_FOTO_1" },
-    { id: 2, nombre: "Cargador Carga Rápida", precio: 50000, imagen: "URL_DE_TU_FOTO_2" },
-    { id: 3, nombre: "Audífonos Pro", precio: 120000, imagen: "URL_DE_TU_FOTO_3" }
+// --- LISTA DE PRODUCTOS QUE TODOS LOS CLIENTES VERÁN ---
+let productos = [
+    { 
+        id: 1, 
+        nombre: "Carcasa Antigolpes", 
+        precio: 25000, 
+        imagen: "https://i.postimg.cc/m2tY0YfN/carcasa.jpg" 
+    },
+    { 
+        id: 2, 
+        nombre: "Cargador Carga Rápida", 
+        precio: 45000, 
+        imagen: "https://i.postimg.cc/3R8X8X8x/cargador.jpg" 
+    },
+    { 
+        id: 3, 
+        nombre: "Vidrio Templado 9D", 
+        precio: 15000, 
+        imagen: "https://i.postimg.cc/7Z9Z9Z9z/vidrio.jpg" 
+    },
+    { 
+        id: 4, 
+        nombre: "Audífonos Bluetooth Pro", 
+        precio: 85000, 
+        imagen: "https://i.postimg.cc/L5L5L5L5/audifonos.jpg" 
+    }
 ];
+
+// Mantenemos la conexión con la memoria local por si quieres agregar algo solo en tu celular
+if (localStorage.getItem('productos_tienda')) {
+    const productosGuardados = JSON.parse(localStorage.getItem('productos_tienda'));
+    // Unimos los fijos con los que tú agregues manualmente
+    productos = [...productos, ...productosGuardados.filter(pg => !productos.some(p => p.id === pg.id))];
+}
 let carrito = [];
 
 // 3. FUNCIÓN PARA DIBUJAR LA TIENDA (Muestra u oculta el botón de borrar)
