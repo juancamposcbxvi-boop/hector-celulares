@@ -6,12 +6,10 @@ let dineroGanado = 0;
 
 // 2. LA LISTA DE PRODUCTOS (Cambiamos const por LET para poder borrar)
 let productos = JSON.parse(localStorage.getItem('productos_tienda')) || [
-    { id: 1, nombre: "Carcasa Antigolpes", precio: 25000, imagen: "img/carcasa.jpg" },
-    { id: 2, nombre: "Cargador Tipo C", precio: 45000, imagen: "img/cargador.jpg" },
-    { id: 3, nombre: "Vidrio Templado", precio: 15000, imagen: "img/vidrio.jpg" },
-    { id: 4, nombre: "Audífonos BT", precio: 85000, imagen: "img/audifonos.jpg" }
+    { id: 1, nombre: "Carcasa iPhone 13", precio: 35000, imagen: "URL_DE_TU_FOTO_1" },
+    { id: 2, nombre: "Cargador Carga Rápida", precio: 50000, imagen: "URL_DE_TU_FOTO_2" },
+    { id: 3, nombre: "Audífonos Pro", precio: 120000, imagen: "URL_DE_TU_FOTO_3" }
 ];
-
 let carrito = [];
 
 // 3. FUNCIÓN PARA DIBUJAR LA TIENDA (Muestra u oculta el botón de borrar)
