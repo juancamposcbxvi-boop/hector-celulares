@@ -29,7 +29,7 @@ let productos = [
         id: 4, 
         nombre: "Audífonos Bluetooth Pro", 
         precio: 85000, 
-        imagen: "https://i.postimg.cc/L5L5L5L5/audifonos.jpg" 
+        imagen: "https://i.postimg.cc/1tyznY3z/images.jpg" 
     }
 ];
 
