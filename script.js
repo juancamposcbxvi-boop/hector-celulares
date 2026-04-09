@@ -11,7 +11,7 @@ let productos = [
         id: 1, 
         nombre: "Carcasa Antigolpes", 
         precio: 25000, 
-        imagen: "https://i.postimg.cc/m2tY0YfN/carcasa.jpg" 
+        imagen: "https://i.postimg.cc/VkNBMD5M/carcasa-jpg.webp" 
     },
     { 
         id: 2, 
